@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_layout"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/confirmationTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black">
+
+        <TextView
+            android:id="@+id/titleDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="15dp"
+            android:drawableLeft="@drawable/ic_info_outline_black_24dp"
+            android:drawablePadding="3dp"
+            android:text="Confirmation"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/confirmationTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="Are you sure want to logged out?"
+        android:textColor="#ff000000"
+        android:textSize="15sp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textDialog"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:id="@+id/btnConfirmYES"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="YES"
+            android:textColor="#ffffffff" />
+
+        <Button
+            android:id="@+id/btnConfirmNO"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toRightOf="@+id/btnConfirmYES"
+            android:background="@drawable/rounded_button"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="NO"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+</RelativeLayout>

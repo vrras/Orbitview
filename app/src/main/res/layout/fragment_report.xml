@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5fb0c9"
+    android:id="@+id/reportLayout"
+    android:scrollbarAlwaysDrawVerticalTrack="true">
+
+    <ScrollView
+        android:id="@+id/reportScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rounded_layout"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/tvTitleReport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="Report"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#7d7d9b"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/infoLayoutReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTitleReport"
+                android:gravity="center">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/inputFirstNameLayoutReport"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/startDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:clickable="true"
+                        android:drawableLeft="@drawable/ic_calendar_red_24dp"
+                        android:drawablePadding="5dp"
+                        android:ellipsize="end"
+                        android:hint="Start Date"
+                        android:focusable="false"
+                        android:textColorHint="@color/black"
+                        android:textSize="15sp" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/inputLastNameLayout"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/inputFirstNameLayoutReport">
+
+                    <EditText
+                        android:id="@+id/endDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:clickable="true"
+                        android:drawableLeft="@drawable/ic_calendar_red_24dp"
+                        android:drawablePadding="5dp"
+                        android:ellipsize="end"
+                        android:hint="End Date"
+                        android:focusable="false"
+                        android:textColorHint="@color/black"
+                        android:textSize="15sp" />
+                </android.support.design.widget.TextInputLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/infoLayoutReport"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp">
+
+                <!--<Button-->
+                    <!--android:id="@+id/btnImage"-->
+                    <!--android:background="@drawable/rounded_button"-->
+                    <!--android:drawableLeft="@drawable/ic_export_white_24dp"-->
+                    <!--android:drawablePadding="5dp"-->
+                    <!--android:padding="10dp"-->
+                    <!--android:text="Image"-->
+                    <!--android:textColor="@color/white"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:clickable="true"-->
+                    <!--/>-->
+
+                <Button
+                    android:id="@+id/btnExport"
+                    android:background="@drawable/rounded_button"
+                    android:drawableLeft="@drawable/ic_export_white_24dp"
+                    android:drawablePadding="5dp"
+                    android:padding="10dp"
+                    android:text="Export"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    />
+
+                <Button
+                    android:id="@+id/btnSearchReport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_button"
+                    android:drawableLeft="@drawable/ic_search_black_24dp"
+                    android:drawablePadding="5dp"
+                    android:padding="10dp"
+                    android:text="Search"
+                    android:textColor="@color/white"
+                    android:clickable="true"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageViewId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="15dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="20dp"
+                android:layout_below="@id/infoLayoutReport">
+
+                <TableLayout
+                    android:id="@+id/tablelayoutid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:id="@+id/rowlay"
+                        android:background="@android:color/holo_blue_light"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:layout_gravity="center"
+                            android:text="No" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Employee Name" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Phone Number" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Email" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Employee Id" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Supervisor" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Customer Name" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Customer Phone" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Location" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Date" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Time" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="15dp"
+                            android:text="Photo/Video" />
+                    </TableRow>
+
+                </TableLayout>
+
+            </HorizontalScrollView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

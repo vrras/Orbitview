@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5fb0c9"
+    android:orientation="vertical"
+    android:id="@+id/attendanceLayout"
+    android:scrollbarAlwaysDrawVerticalTrack="true">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_layout"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        android:padding="5dp">
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Capturing Form"
+        android:textSize="18sp"
+        android:textColor="#7d7d9b"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+    <RelativeLayout
+        android:id="@+id/infoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitle">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputNameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp">
+
+                <EditText
+                    android:id="@+id/inputName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:drawableLeft="@drawable/ic_account_box_red_24dp"
+                    android:drawablePadding="5dp"
+                    android:ellipsize="end"
+                    android:hint="Customer Name"
+                    android:textColorHint="@color/black"
+                    android:textSize="15sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputPhoneLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/inputNameLayout">
+
+                <EditText
+                    android:id="@+id/inputPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:hint="Customer Phone"
+                    android:ellipsize="end"
+                    android:textSize="15sp"
+                    android:drawableLeft="@drawable/ic_phone_android_red_24dp"
+                    android:drawablePadding="5dp"
+                    android:textColorHint="@color/black"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputAddressLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/inputPhoneLayout">
+
+                <EditText
+                    android:id="@+id/inputPlace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:hint="Your Current Location"
+                    android:ellipsize="end"
+                    android:textColorHint="@color/black"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="15sp"
+                    android:drawableLeft="@drawable/ic_place_red_24dp"
+                    android:drawablePadding="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:editable="false"
+                    android:layout_below="@id/inputPhoneLayout" />
+            </android.support.design.widget.TextInputLayout>
+    </RelativeLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/infoLayout"
+            android:layout_marginBottom="20dp">
+        <Button
+            android:id="@+id/btnTakePicture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_button"
+            android:drawableLeft="@drawable/ic_add_white_24dp"
+            android:drawablePadding="5dp"
+            android:text="Take Picture" />
+        <Button
+            android:id="@+id/btnTakeVideo"
+            android:layout_toRightOf="@id/btnTakePicture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_button"
+            android:drawableLeft="@drawable/ic_add_white_24dp"
+            android:drawablePadding="5dp"
+            android:text="Take Video" />
+        </LinearLayout>
+    </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
